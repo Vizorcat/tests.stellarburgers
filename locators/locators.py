@@ -2,11 +2,11 @@ from selenium.webdriver.common.by import By
 
 class Locators:
 
-    REGISTER_BUTTON = (By.XPATH, "//*[@id='root']/div/main/div/form/button") # Кнопка "Зарегистрироваться"
-    NAME_FIELD = (By.XPATH, "//*[@id='root']/div/main/div/form/fieldset[1]/div/div/input") # Поле ввода имени
-    EMAIL_FIELD = (By.XPATH, "//*[@id='root']/div/main/div/form/fieldset[2]/div/div/input") # Поле ввода email
-    PASSWORD_FIELD = (By.XPATH, "//*[@id='root']/div/main/div/form/fieldset[3]/div/div/input") # Поле ввода пароля
-    REGISTRATION_ERROR = (By.XPATH, "//*[@id='root']/div/main/div/form/fieldset[3]/div/p") # Ошибка при некорректной регистрации
+    REGISTER_BUTTON = (By.XPATH, "//button[text()='Зарегистрироваться']") # Кнопка "Зарегистрироваться"
+    NAME_FIELD = (By.XPATH, "//input[@name='name']") # Поле ввода имени
+    EMAIL_FIELD = (By.XPATH, "//input[@name='name']") # Поле ввода email
+    PASSWORD_FIELD = (By.XPATH, "//input[@name='Пароль']") # Поле ввода пароля
+    REGISTRATION_ERROR = (By.XPATH, "//p[@class='input__error text_type_main-default' and text()='Некорректный пароль']") # Ошибка при некорректной регистрации
 
     LOGIN_BUTTON = (By.XPATH, "//*[@id='root']/div/main/div/form/button") # Кнопка "Войти"
     LOGIN_EMAIL_FIELD = (By.XPATH, "//*[@id='root']/div/main/div/form/fieldset[1]/div/div/input") # Поле email для входа
@@ -20,4 +20,4 @@ class Locators:
 
     BUNS_SECTION = (By.XPATH, "//*[@id='root']/div/main/section[1]/div[1]") # Раздел "Булки"
     SAUCES_SECTION = (By.XPATH, "//*[@id='root']/div/main/section[1]/div[1]/div[2]/span") # Раздел "Соусы"
-    FILLINGS_SECTION = (By.XPATH, "//*[@id='root']/div/main/section[1]/div[1]") # Раздел "Начинки"
+    FILLINGS_SECTION = (By.XPATH, "//*[@id='root']/div/main/section[1]/div[1]/div[3]/span") # Раздел "Начинки"

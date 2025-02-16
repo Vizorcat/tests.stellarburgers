@@ -1,3 +1,4 @@
+
 6 тестов из основного задания:
 1). test_navigation_to_account PASSED                         [100%] 
 2). test_login_via_main_page PASSED                           [100%] 

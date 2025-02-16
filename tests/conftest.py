@@ -8,7 +8,6 @@ def driver():
     yield driver
     driver.quit()
 
-import pytest
 from generators.data_generators import generate_email, generate_password
 
 @pytest.fixture
