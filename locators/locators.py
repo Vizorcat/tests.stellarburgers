@@ -8,16 +8,17 @@ class Locators:
     PASSWORD_FIELD = (By.XPATH, "//input[@name='Пароль']") # Поле ввода пароля
     REGISTRATION_ERROR = (By.XPATH, "//p[@class='input__error text_type_main-default' and text()='Некорректный пароль']") # Ошибка при некорректной регистрации
 
-    LOGIN_BUTTON = (By.XPATH, "//*[@id='root']/div/main/div/form/button") # Кнопка "Войти"
-    LOGIN_EMAIL_FIELD = (By.XPATH, "//*[@id='root']/div/main/div/form/fieldset[1]/div/div/input") # Поле email для входа
-    LOGIN_PASSWORD_FIELD = (By.XPATH, "//*[@id='root']/div/main/div/form/fieldset[2]/div/div/input") # Поле пароля для входа
-    ACCOUNT_BUTTON = (By.XPATH, "//*[@id='root']/div/header/nav/a/p") # Кнопка "Личный кабинет"
+    LOGIN_BUTTON = (By.XPATH, "//button[@type='submit' and text()='Войти']") # Кнопка "Войти"
+    LOGIN_EMAIL_FIELD = (By.XPATH, "//input[@name='email']")  # Поле email для входа
+    LOGIN_PASSWORD_FIELD = (By.XPATH, "//input[@name='password']")  # Поле пароля для входа
+    ACCOUNT_BUTTON = (By.XPATH, "//a[@href='/account']")  # Кнопка "Личный кабинет"
 
-    CONSTRUCTOR_BUTTON = (By.XPATH, "//*[@id='root']/div/header/nav/ul/li[1]/a/p") #Конструктор
-    LOGO = (By.XPATH, "//*[@id='root']/div/header/nav/div/a/svg") # Логотип Stellar Burgers
+    CONSTRUCTOR_BUTTON = (By.XPATH, "//p[text()='Конструктор']") #Конструктор
+    LOGO = (By.XPATH, "//a[@href='/']/*[name()='svg']")  # Логотип Stellar Burgers
 
-    LOGOUT_BUTTON = (By.XPATH, "//button[text()='Выход']") # Кнопка "Выход"
+    LOGOUT_BUTTON = (By.XPATH, "//button[text()='Выход']")  # Кнопка "Выход"
 
-    BUNS_SECTION = (By.XPATH, "//*[@id='root']/div/main/section[1]/div[1]") # Раздел "Булки"
-    SAUCES_SECTION = (By.XPATH, "//*[@id='root']/div/main/section[1]/div[1]/div[2]/span") # Раздел "Соусы"
-    FILLINGS_SECTION = (By.XPATH, "//*[@id='root']/div/main/section[1]/div[1]/div[3]/span") # Раздел "Начинки"
+    BUNS_SECTION = (By.XPATH, "//span[text()='Булки']/ancestor::div[contains(@class, 'tab')]")  # Раздел "Булки"
+    SAUCES_SECTION = (By.XPATH, "//span[text()='Соусы']/ancestor::div[contains(@class, 'tab')]")  # Раздел "Соусы"
+    FILLINGS_SECTION = (By.XPATH, "//span[text()='Начинки']/ancestor::div[contains(@class, 'tab')]") # Раздел "Начинки"
+    ACTIVE_TAB = (By.XPATH, "//div[contains(@class, 'tab_tab_type_current')]") # Активная вкладка (по классу)

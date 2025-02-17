@@ -1,18 +1,6 @@
-import random
-import string
+import pytest
+from helpers.data_generators import generate_email, generate_password
 from locators.locators import Locators
-
-
-def generate_email(domain="gmail.com"):
-    username_length = 8
-    username = ''.join(random.choices(string.ascii_lowercase + string.digits, k=username_length))
-    return f"{username}@{domain}"
-
-def generate_password(length=8):
-    if length < 4:
-        raise ValueError("Пароль должен быть не менее 4 символов.")
-    characters = string.ascii_letters + string.digits + string.punctuation
-    return ''.join(random.choices(characters, k=length))
 
 def test_successful_registration(driver):
     driver.get("https://stellarburgers.nomoreparties.site/register")
